@@ -1,7 +1,23 @@
+<div style="padding: 15px 0; background-color: #E2E2E1; color: #000">
+  <h3 style="padding: 0 15px;">Ambari EmberJS Components</h3>
+</div>
+<div class="container-fluid">
 
+  <div class="col-md-3">
+    <h5>vertical-optionlist</h5>
+    <div  style="height:200px; padding:5px 5px 0 0;margin: 20px 0; border: 1px solid #DDD;">
+      {{#vertical-optionlist optionlist=optionlist }}
+        <ul class="dropdown-menu">
+          {{#each optionlist as |item|}}
+            <li><a href="javascript:void(0)" {{action 'goToOption' item }}> {{item.label}}</a></li>
+          {{/each}}
+        </ul>
+      {{/vertical-optionlist}}
+    </div>
+  </div>
 
-<div class="col-md-3">I am on the welcome page.</div>
+  <div class="col-md-2">
+    {{#say-hello}}{{/say-hello}}
+  </div>
 
-{{#say-hello}}
-
-{{/say-hello}}
+</div>
